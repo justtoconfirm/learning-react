@@ -4,6 +4,6 @@ import ReactDOM from 'react-dom'
 import Button from './Button'
 
 ReactDOM.render(
-    <Button />,
+    <Button>Sign in</Button>,
     document.getElementById('app')
 )
