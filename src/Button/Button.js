@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Button = ({ type = 'button', url = '', className = '', theme = '', isFullWidth = false, children }) => {
+const Button = ({ type = 'button', url = '', className = '', theme = '', isFullWidth = false, onClick, children }) => {
 
 	const buttonClass = classNames('btn', className, {
 		'btn--primary' : theme === 'primary',
@@ -15,7 +15,7 @@ const Button = ({ type = 'button', url = '', className = '', theme = '', isFullW
 		<a href={url} className={buttonClass}>{children}</a>
 
 	const renderButton = () => 
-		<button type={type} className={buttonClass}>{children}</button>
+		<button type={type} className={buttonClass} onClick={onClick}>{children}</button>
 
 	return (
 		isAnchor ? renderAnchor() : renderButton()

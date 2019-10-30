@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Button from './Button/Button'
+
 const TableBody = props => {
 
     const rows = props.characterData.map((row, index) => {
@@ -8,7 +10,7 @@ const TableBody = props => {
                 <td>{row.name}</td>
                 <td>{row.job}</td>
                 <td>
-                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                    <Button theme="primary" onClick={() => props.removeCharacter(index)}>Delete</Button>
                 </td>
             </tr>
         )
